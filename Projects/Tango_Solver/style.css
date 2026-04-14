@@ -1,0 +1,360 @@
+/* ─── Reset & Base ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #0b0c10;
+  --surface:     #13151c;
+  --surface2:    #1c1f2b;
+  --border:      #2a2d3e;
+  --accent:      #f5c542;
+  --accent2:     #7b8cde;
+  --sun:         #f5c542;
+  --moon:        #7b8cde;
+  --text:        #e8eaf0;
+  --muted:       #5c6080;
+  --success:     #4caf88;
+  --error:       #e05c5c;
+  --radius:      12px;
+  --font-head:   'Syne', sans-serif;
+  --font-mono:   'JetBrains Mono', monospace;
+}
+
+html { font-size: 16px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ─── Background Grid ────────────────────────────────────────── */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(123,140,222,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(123,140,222,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Layout ─────────────────────────────────────────────────── */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ─── Hero ───────────────────────────────────────────────────── */
+.hero { text-align: center; padding: 2rem 0 1rem; }
+
+.hero-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--accent2);
+  border: 1px solid var(--accent2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 1.25rem;
+  opacity: 0.8;
+}
+
+.hero-title {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.sun-glyph  { color: var(--sun);  }
+.moon-glyph { color: var(--moon); }
+
+.hero-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+/* ─── Card ───────────────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.card-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.hidden { display: none !important; }
+
+/* ─── Setup Row ──────────────────────────────────────────────── */
+.setup-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 140px;
+}
+
+.input-group label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.input-wrap:focus-within { border-color: var(--accent); }
+
+.input-wrap input {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.6rem 0.9rem;
+  width: 80px;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.input-wrap input::-webkit-inner-spin-button,
+.input-wrap input::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+.input-unit {
+  font-size: 0.7rem;
+  color: var(--muted);
+  padding-right: 0.75rem;
+}
+
+/* ─── Buttons ────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.4rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.18s;
+  white-space: nowrap;
+}
+
+.btn-secondary {
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: var(--border); border-color: var(--accent2); color: var(--accent2); }
+
+.btn-primary {
+  background: var(--accent);
+  color: #0b0c10;
+}
+.btn-primary:hover { background: #ffd166; box-shadow: 0 0 24px rgba(245,197,66,0.35); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover { color: var(--error); border-color: var(--error); }
+
+.btn-arrow { transition: transform 0.2s; }
+.btn-secondary:hover .btn-arrow { transform: translateX(4px); }
+
+.btn-spinner {
+  display: inline-block;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ─── Legend ─────────────────────────────────────────────────── */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.legend-item kbd {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text);
+}
+
+.legend-sep { opacity: 0.4; }
+
+/* ─── Grid ───────────────────────────────────────────────────── */
+#grid-container {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+#puzzle-grid {
+  border-collapse: collapse;
+}
+
+#puzzle-grid td {
+  padding: 3px;
+}
+
+#puzzle-grid input.cell {
+  width: 52px;
+  height: 52px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--surface2);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s, color 0.15s, box-shadow 0.15s;
+  caret-color: transparent;
+  cursor: pointer;
+}
+
+#puzzle-grid input.cell:focus {
+  border-color: var(--accent2);
+  box-shadow: 0 0 0 2px rgba(123,140,222,0.2);
+  background: var(--surface);
+}
+
+/* Sun cell */
+#puzzle-grid input.cell.sun {
+  color: var(--sun);
+  border-color: rgba(245,197,66,0.5);
+  background: rgba(245,197,66,0.07);
+}
+
+/* Moon cell */
+#puzzle-grid input.cell.moon {
+  color: var(--moon);
+  border-color: rgba(123,140,222,0.5);
+  background: rgba(123,140,222,0.07);
+}
+
+/* Solved cells (filled by backend) */
+#puzzle-grid input.cell.solved-sun {
+  color: var(--sun);
+  border-color: var(--sun);
+  background: rgba(245,197,66,0.13);
+  animation: popIn 0.25s ease both;
+}
+
+#puzzle-grid input.cell.solved-moon {
+  color: var(--moon);
+  border-color: var(--moon);
+  background: rgba(123,140,222,0.13);
+  animation: popIn 0.25s ease both;
+}
+
+/* Pre-filled by user — locked */
+#puzzle-grid input.cell.prefilled {
+  opacity: 1;
+  cursor: default;
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0.7); opacity: 0; }
+  60%  { transform: scale(1.08); }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+/* ─── Action Row ─────────────────────────────────────────────── */
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ─── Status Bar ─────────────────────────────────────────────── */
+.status-bar {
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.status-bar.success {
+  background: rgba(76,175,136,0.1);
+  border-color: rgba(76,175,136,0.4);
+  color: var(--success);
+}
+
+.status-bar.error {
+  background: rgba(224,92,92,0.1);
+  border-color: rgba(224,92,92,0.4);
+  color: var(--error);
+}
+
+.status-bar.info {
+  background: rgba(123,140,222,0.1);
+  border-color: rgba(123,140,222,0.4);
+  color: var(--accent2);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  #puzzle-grid input.cell { width: 40px; height: 40px; font-size: 1rem; }
+  .container { padding: 2rem 1rem 4rem; }
+  .hero-title { font-size: 2rem; }
+}

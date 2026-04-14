@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tango Solver</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <main class="container">
+
+    <header class="hero">
+      <div class="hero-badge">PUZZLE ENGINE</div>
+      <h1 class="hero-title">
+        <span class="sun-glyph">☀</span> Tango <span class="moon-glyph">◑</span> Solver
+      </h1>
+      <p class="hero-sub">Fill your grid · Hit Solve · Watch it think</p>
+    </header>
+
+    <!-- Step 1: Grid Size -->
+    <section class="card" id="setup-card">
+      <div class="card-label">STEP 01 — CONFIGURE</div>
+      <div class="setup-row">
+        <div class="input-group">
+          <label for="grid-size">Grid Size</label>
+          <div class="input-wrap">
+            <input type="number" id="grid-size" min="2" max="10" value="6" />
+            <span class="input-unit">× N</span>
+          </div>
+        </div>
+        <button id="generate-btn" class="btn btn-secondary">
+          Generate Grid
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Step 2: Grid Input -->
+    <section class="card hidden" id="grid-card">
+      <div class="card-label">STEP 02 — INPUT</div>
+      <div class="legend">
+        <span class="legend-item"><kbd>X</kbd> = Sun ☀</span>
+        <span class="legend-sep">·</span>
+        <span class="legend-item"><kbd>O</kbd> = Moon ◑</span>
+        <span class="legend-sep">·</span>
+        <span class="legend-item"><kbd>empty</kbd> = solve me</span>
+      </div>
+      <div id="grid-container"></div>
+      <div class="action-row">
+        <button id="clear-btn" class="btn btn-ghost">Clear All</button>
+        <button id="solve-btn" class="btn btn-primary">
+          <span id="solve-label">Solve Puzzle</span>
+          <span class="btn-spinner hidden" id="spinner">⟳</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Status / Result -->
+    <div id="status-bar" class="status-bar hidden"></div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
