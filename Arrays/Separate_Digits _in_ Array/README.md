@@ -28,3 +28,11 @@ This solution avoids using extra data structures like:
 - Array Manipulation
 
 ---
+
+
+## Complexity Analysis
+
+| Approach | Time | Space |
+|----------|------|------|
+| Stack Solution | O(d) | O(d) |
+| Space Optimized | O(d) | O(1) auxiliary |
