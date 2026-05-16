@@ -1,0 +1,179 @@
+========================================
+92. Reverse Linked List II
+========================================
+
+Example 1
+----------------------------------------
+Input:
+1 → 2 → 3 → 4 → 5
+left = 2
+right = 4
+
+Reversed Part:
+2 → 3 → 4
+becomes
+4 → 3 → 2
+
+Output:
+1 → 4 → 3 → 2 → 5
+
+
+========================================
+
+Example 2
+----------------------------------------
+Input:
+5
+left = 1
+right = 1
+
+Output:
+5
+
+Explanation:
+Only one node exists.
+No reversal needed.
+
+
+========================================
+
+Example 3
+----------------------------------------
+Input:
+1 → 2
+left = 1
+right = 2
+
+Reversed Part:
+1 → 2
+becomes
+2 → 1
+
+Output:
+2 → 1
+
+
+========================================
+
+Example 4
+----------------------------------------
+Input:
+1 → 2 → 3 → 4 → 5
+left = 1
+right = 5
+
+Reversed Part:
+1 → 2 → 3 → 4 → 5
+becomes
+5 → 4 → 3 → 2 → 1
+
+Output:
+5 → 4 → 3 → 2 → 1
+
+Explanation:
+Entire linked list is reversed.
+
+
+========================================
+
+Example 5
+----------------------------------------
+Input:
+1 → 2 → 3 → 4 → 5
+left = 3
+right = 3
+
+Output:
+1 → 2 → 3 → 4 → 5
+
+Explanation:
+left == right
+No reversal happens.
+
+
+========================================
+
+Edge Cases
+========================================
+
+1. Reversal starts from head
+----------------------------------------
+Input:
+1 → 2 → 3
+left = 1
+right = 2
+
+Output:
+2 → 1 → 3
+
+
+========================================
+
+2. Reversal ends at tail
+----------------------------------------
+Input:
+1 → 2 → 3 → 4
+left = 3
+right = 4
+
+Output:
+1 → 2 → 4 → 3
+
+
+========================================
+
+3. Single Node Linked List
+----------------------------------------
+Input:
+7
+left = 1
+right = 1
+
+Output:
+7
+
+
+========================================
+
+4. Two Node Linked List
+----------------------------------------
+Input:
+1 → 2
+left = 1
+right = 2
+
+Output:
+2 → 1
+
+
+========================================
+
+Time Complexity
+========================================
+
+O(N)
+
+- Traverse list once
+- Reverse sublist in-place
+
+
+========================================
+
+Space Complexity
+========================================
+
+O(1)
+
+- No extra data structures used
+
+
+========================================
+
+Key Concepts
+========================================
+
+✓ Linked List Reversal
+✓ Pointer Manipulation
+✓ Dummy Node
+✓ In-place Reversal
+✓ Iterative Approach
