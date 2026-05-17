@@ -24,11 +24,13 @@ The minimum frequency ensures that only common characters across all words are i
 
 ---
 
-##⏱️ Complexity Analysis
+# ⏱️ Complexity Analysis
 
-_+______________________+_
-|Complexity   |	Value  |
-_________________________
-|Time Complexity |	O(N × M)|
-|Space Complexity	|O(26)|
-_+_______________________+_
+| Operation | Complexity |
+|---|---|
+| Building frequency array for first word | O(M) |
+| Traversing remaining words | O(N × M) |
+| Updating minimum frequencies | O(26 × N) |
+| Building final result | O(26) |
+| Overall Time Complexity | O(N × M) |
+| Space Complexity | O(26) |
