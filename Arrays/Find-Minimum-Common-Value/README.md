@@ -1,5 +1,5 @@
-# 2540. Minimum Common Value
-
+Minimum Common Value
+ 
 ## Description
 
 Given two integer arrays `nums1` and `nums2` sorted in non-decreasing order, return the minimum integer common to both arrays. If there is no common integer, return `-1`.
