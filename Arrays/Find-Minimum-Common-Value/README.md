@@ -44,12 +44,35 @@ Since both arrays are already sorted:
 
 ---
 
+# Approach 3 — Binary Search
+
+## Idea
+
+- Traverse elements from first array
+- Search each element in second sorted array using Binary Search
+- If found, return the element
+
+---
+
 # Complexity Comparison
 
-| Approach | Time Complexity | Space Complexity | Best Use Case |
+| Approach | Time Complexity | Space Complexity | Advantage |
 |---|---|---|---|
-| Two Pointer | O(n + m) | O(1) | Sorted Arrays |
-| HashSet | O(n + m) | O(n) | Unsorted Arrays |
+| Two Pointer | O(n + m) | O(1) | Best for sorted arrays |
+| HashSet | O(n + m) | O(n) | Works for unsorted arrays |
+| Binary Search | O(n log m) | O(1) | Efficient searching in sorted arrays |
+
+---
+# Which Approach is Best?
+
+## ✅ Best Approach → Two Pointer
+
+Reason:
+
+- Uses sorted property efficiently
+- No extra memory
+- Linear traversal
+- Optimal solution
 
 ---
 
@@ -57,4 +80,5 @@ Since both arrays are already sorted:
 
 - The **Two Pointer** approach is the optimal solution because the arrays are already sorted.
 - The **HashSet** approach is simpler for unsorted arrays but uses extra memory.
+- the **Binary Search** approach is an efficient alternative for searching common elements in sorted arrays.
 - Understanding array properties helps in choosing the best algorithm.
