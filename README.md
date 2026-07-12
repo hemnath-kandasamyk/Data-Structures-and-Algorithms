@@ -38,22 +38,6 @@ The goal of this repository is to improve:
 
 ---
 
-
-# Progress
-
-| Topic | Problems Solved |
-|---|---:|
-| Arrays | 4 |
-| BFS | 1 |
-| Backtracking | 2 |
-| Graph | 0 |
-| Greedy | 0 |
-| HashMap | 0 |
-| LinkedList | 0 |
-| Trees | 0 |
-
----
-
 # Concepts Practiced
 
 - Array Manipulation
