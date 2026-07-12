@@ -1,0 +1,32 @@
+class Solution {
+    public int[] shortestToChar(String s, char c) {
+        int n = s.length();
+        int[] res = new int[n];
+
+        Queue<Integer> queue = new ArrayDeque<>();
+
+        for(int i=0;i<n;i++){
+            if(s.charAt(i)!=c){
+                res[i]=-1;
+            }
+            else{
+                queue.offer(i);
+            }
+        }
+
+        while(!queue.isEmpty()){
+            int curr=queue.poll();
+            int left=curr-1;
+            int right=curr+1;
+            if(left>=0 && res[left]==-1){
+                res[left]=res[curr]+1;
+                queue.offer(left);
+            }
+            if(right<n && res[right]==-1){
+                res[right]=res[curr]+1;
+                queue.offer(right);
+            }
+        }
+        return res;
+    }
+}
