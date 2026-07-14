@@ -1,29 +1,15 @@
 class Solution {
-    List<Integer> seqno = new ArrayList<>();
-    public List<Integer> sequentialDigits(int low, int high) {
-        gen();
-        List<Integer> list = new ArrayList<>();
-        for(int j=0;j<seqno.size();j++){
-            int i = seqno.get(j);
-            if(i>=low && i<=high){
-                list.add(i);
-            }
-        }
-        return list;        
-    }
+    public static final int[] seqdigits ={1,2,3,4,5,6,7,8,9,12,23,34,45,56,67,78,89,123,234,345,456,567,678,789,1234,2345,3456,4567,5678,6789,12345,23456,34567,45678,56789,123456,234567,345678,456789,1234567,2345678,3456789,12345678,23456789,123456789};
 
-    public void gen(){
-        long n=1;
-        while(n<=9){
-            long temp=n;
-            long res = 0;
-            while(temp<=9){
-                res =(res*10)+temp;
-                seqno.add((int)res);
-                temp++;
+    public List<Integer> sequentialDigits(int low, int high) {
+        List<Integer> list = new ArrayList<>();
+
+        for(int i =0;i<seqdigits.length;i++){
+            int value = seqdigits[i];
+            if(value>=low && value <=high){
+                list.add(value);
             }
-            n++;
         }
-        Collections.sort(seqno);
+        return list;
     }
 }
