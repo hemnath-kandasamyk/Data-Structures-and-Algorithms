@@ -1,26 +1,29 @@
 class Solution {
+    List<Integer> seqno = new ArrayList<>();
     public List<Integer> sequentialDigits(int low, int high) {
+        gen();
         List<Integer> list = new ArrayList<>();
-        for(int i = low;i<=high;i++){
-            if(isseq(i)){
+        for(int j=0;j<seqno.size();j++){
+            int i = seqno.get(j);
+            if(i>=low && i<=high){
                 list.add(i);
             }
         }
-        return list;
+        return list;        
     }
 
-    public boolean isseq(int x){
-
-        int prev = x%10;
-        x/=10;
-
-        while(x!=0){
-            if(x%10 != prev-1){
-                return false;
+    public void gen(){
+        long n=1;
+        while(n<=9){
+            long temp=n;
+            long res = 0;
+            while(temp<=9){
+                res =(res*10)+temp;
+                seqno.add((int)res);
+                temp++;
             }
-            prev=x%10;
-            x/=10;
+            n++;
         }
-        return true;
+        Collections.sort(seqno);
     }
 }
