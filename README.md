@@ -125,7 +125,7 @@ A professionally structured collection of topic-wise DSA solutions, optimized co
 
 | # | Problem | Difficulty |
 |---|---------|------------|
-| 1291 | [Sequential Digits](./Enumeration/Sequential%20Digits/) | Medium |
+| 1291 | [Sequential Digits](./Enumeration/Sequential%20Digits/) | Easy |
 
 </details>
 
