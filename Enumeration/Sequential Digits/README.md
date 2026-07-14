@@ -1,29 +1,41 @@
 # 1291. Sequential Digits
 
 [![LeetCode Link](https://img.shields.io/badge/LeetCode-Problem_Link-FFA116?style=flat-square&logo=leetcode)](https://leetcode.com/problems/sequential-digits/)
-![Difficulty](https://img.shields.io/badge/Difficulty-Medium-eab308?style=flat-square)
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-22c55e?style=flat-square)
 
 ## Problem Statement
 
-<p>An&nbsp;integer has <em>sequential digits</em> if and only if each digit in the number is one more than the previous digit.</p>
+An integer has sequential digits if and only if each digit in the number is one more than the previous digit.
 
-<p>Return a <strong>sorted</strong> list of all the integers&nbsp;in the range <code>[low, high]</code>&nbsp;inclusive that have sequential digits.</p>
+Return a sorted list of all the integers in the range [low, high] inclusive that have sequential digits.
 
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-<pre><strong>Input:</strong> low = 100, high = 300
-<strong>Output:</strong> [123,234]
-</pre><p><strong class="example">Example 2:</strong></p>
-<pre><strong>Input:</strong> low = 1000, high = 13000
-<strong>Output:</strong> [1234,2345,3456,4567,5678,6789,12345]
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+ 
+Example 1:
+Input: low = 100, high = 300
+Output: [123,234]
+Example 2:
+Input: low = 1000, high = 13000
+Output: [1234,2345,3456,4567,5678,6789,12345]
 
-<ul>
-	<li><code>10 &lt;= low &lt;= high &lt;= 10^9</code></li>
-</ul>
+ 
+Constraints:
 
+
+	10 <= low <= high <= 10^9
+
+## Examples
+
+```
+Input: low = 100, high = 300
+Output: [123,234]
+
+Input: low = 1000, high = 13000
+Output: [1234,2345,3456,4567,5678,6789,12345]
+```
+
+## Constraints
+
+- 10 <= low <= high <= 10^9
 
 ---
 *Synced automatically with [AlgoVault](https://github.com/mr-sanjai-offl/AlgoVault)*
