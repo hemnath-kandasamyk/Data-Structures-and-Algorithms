@@ -119,6 +119,17 @@ A professionally structured collection of topic-wise DSA solutions, optimized co
 </details>
 
 
+### Enumeration
+<details>
+<summary>Click to expand Enumeration problems</summary>
+
+| # | Problem | Difficulty |
+|---|---------|------------|
+| 1291 | [Sequential Digits](./Enumeration/Sequential%20Digits/) | Medium |
+
+</details>
+
+
 ### Two Pointers
 <details>
 <summary>Click to expand Two Pointers problems</summary>
