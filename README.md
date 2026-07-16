@@ -137,7 +137,7 @@ A professionally structured collection of topic-wise DSA solutions, optimized co
 
 | # | Problem | Difficulty |
 |---|---------|------------|
-| — | [Gas Station](./General/Gas%20Station/) | Medium |
+| — | [Check If Digits Are Equal in String After Operations I](./General/Check%20If%20Digits%20Are%20Equal%20in%20String%20After%20Operations%20I/) | Medium |
 
 </details>
 
