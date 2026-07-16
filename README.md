@@ -130,6 +130,17 @@ A professionally structured collection of topic-wise DSA solutions, optimized co
 </details>
 
 
+### General
+<details>
+<summary>Click to expand General problems</summary>
+
+| # | Problem | Difficulty |
+|---|---------|------------|
+| — | [Gas Station](./General/Gas%20Station/) | Medium |
+
+</details>
+
+
 ### Two Pointers
 <details>
 <summary>Click to expand Two Pointers problems</summary>
