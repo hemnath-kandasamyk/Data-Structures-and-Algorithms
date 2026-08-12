@@ -5,6 +5,28 @@
 <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=22&pause=1000&color=8A2BE2&center=true&vCenter=true&width=600&lines=Java-Powered+Problem+Solving;Topic-wise+DSA+Mastery;Interview+%26+Competitive+Prep;Consistent+Practice+Every+Day" alt="Typing SVG"/>
 
 <br/>
+<h3 align="center">💻 Coding Platforms</h3>
+
+<p align="center">
+
+  <!-- LeetCode -->
+  <img 
+    src="https://cdn.simpleicons.org/leetcode/FFA116" 
+    alt="LeetCode" 
+    width="80"
+  />
+  <img 
+    src="https://cdn.simpleicons.org/hackerrank/00EA64" 
+    alt="HackerRank" 
+    width="80"
+  />
+  <img
+    src="https://cdn.simpleicons.org/geeksforgeeks/2F8D46" 
+    alt="GeeksforGeeks" 
+    width="80"
+  />
+
+</p>
 
 <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
 <img src="https://img.shields.io/badge/DSA-6C3EDB?style=for-the-badge" alt="DSA"/>
